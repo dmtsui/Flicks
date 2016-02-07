@@ -50,9 +50,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="to4-PO-foq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2993" y="-702"/>
+            <point key="canvasLocation" x="3045" y="-750"/>
         </scene>
-        <!--Item-->
+        <!--Top Rated-->
         <scene sceneID="1Oi-zO-KhV">
             <objects>
                 <viewController id="h0S-aL-mHT" sceneMemberID="viewController">
@@ -63,9 +63,17 @@
                     <view key="view" contentMode="scaleToFill" id="bbs-Sz-rRc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Place holder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOv-uf-mxs">
+                                <rect key="frame" x="236" y="160" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="y4r-ky-nWd"/>
+                    <tabBarItem key="tabBarItem" title="Top Rated" image="Top Rated" id="y4r-ky-nWd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QdB-zu-L9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,11 +97,11 @@
             </objects>
             <point key="canvasLocation" x="-33" y="-756"/>
         </scene>
-        <!--Item-->
+        <!--Now Playing-->
         <scene sceneID="TyN-cg-Nve">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aXC-yd-Zdc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="7g0-v8-M6x"/>
+                    <tabBarItem key="tabBarItem" title="Now Playing" image="Now Playing" id="7g0-v8-M6x"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bGE-6w-ZF5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -109,4 +117,8 @@
             <point key="canvasLocation" x="1248" y="-1164"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Now Playing" width="29" height="29"/>
+        <image name="Top Rated" width="29" height="29"/>
+    </resources>
 </document>
