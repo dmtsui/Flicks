@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="oxp-Kq-gUa" customClass="MoviewTableViewCell" customModule="Flicks" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="com.dtsui.MovieTableViewCell" id="oxp-Kq-gUa" customClass="MoviewTableViewCell" customModule="Flicks" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oxp-Kq-gUa" id="DLD-02-n6h">
@@ -29,6 +29,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="eRb-Bw-HbH"/>
+                    <connections>
+                        <outlet property="movieTableView" destination="76r-cf-ESI" id="BdS-8l-huQ"/>
+                        <outlet property="tableView" destination="76r-cf-ESI" id="piG-zb-8Du"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wb-RQ-Xga" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
