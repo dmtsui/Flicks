@@ -48,7 +48,7 @@ class MovieTableViewController: UITableViewController, UISearchControllerDelegat
     
     func updateData(refreshControl: UIRefreshControl) {
         // Do any additional setup after loading the view, typically from a nib.
-        EZLoadingActivity.show("Uploading...", disableUI: false)
+//        EZLoadingActivity.show("Uploading...", disableUI: false)
         let request = NSURLRequest(URL: dataURL)
         let session = NSURLSession(
             configuration: NSURLSessionConfiguration.defaultSessionConfiguration(),
