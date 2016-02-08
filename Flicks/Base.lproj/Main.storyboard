@@ -3,24 +3,48 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Movie Table View Controller-->
+        <!--Now Playing Table View Controller-->
         <scene sceneID="X9v-by-nfa">
             <objects>
-                <tableViewController id="8MX-mq-pQ3" customClass="MovieTableViewController" customModule="Flicks" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="76r-cf-ESI">
+                <tableViewController id="8MX-mq-pQ3" customClass="NowPlayingTableViewController" customModule="Flicks" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" sectionHeaderHeight="28" sectionFooterHeight="28" id="76r-cf-ESI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="com.dtsui.MovieTableViewCell" id="oxp-Kq-gUa" customClass="MoviewTableViewCell" customModule="Flicks" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="com.dtsui.MovieTableViewCell" rowHeight="140" id="oxp-Kq-gUa" customClass="MoviewTableViewCell" customModule="Flicks" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oxp-Kq-gUa" id="DLD-02-n6h">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="139.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UFq-Jk-9tc">
+                                            <rect key="frame" x="26" y="8" width="94" height="127"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVK-BZ-rvb">
+                                            <rect key="frame" x="144" y="8" width="326" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" text="Overview" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcD-gb-GJh">
+                                            <rect key="frame" x="144" y="44" width="244" height="87.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="overviewLabel" destination="jcD-gb-GJh" id="Sof-Fe-Be1"/>
+                                    <outlet property="posterView" destination="UFq-Jk-9tc" id="qMv-RB-wpL"/>
+                                    <outlet property="titleLabel" destination="LVK-BZ-rvb" id="IxM-Fw-0JA"/>
+                                    <segue destination="ZVP-tc-U79" kind="show" id="PrZ-LS-9OE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -38,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="2060" y="-1164"/>
         </scene>
-        <!--View Controller-->
+        <!--Moview Detail View Controller-->
         <scene sceneID="WpP-F7-Qtf">
             <objects>
-                <viewController id="ZVP-tc-U79" sceneMemberID="viewController">
+                <viewController id="ZVP-tc-U79" customClass="MoviewDetailViewController" customModule="Flicks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PXS-b1-nMn"/>
                         <viewControllerLayoutGuide type="bottom" id="6yk-0f-DUS"/>
@@ -49,12 +73,39 @@
                     <view key="view" contentMode="scaleToFill" id="x2u-jP-XSD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Boa-LD-oRD">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <view opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EzS-0z-ZoG" userLabel="OverviewContainer">
+                                <rect key="frame" x="130" y="378" width="349" height="173"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="zkC-IS-Zzc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6yk-0f-DUS" firstAttribute="top" secondItem="EzS-0z-ZoG" secondAttribute="bottom" id="0Es-zZ-JjA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EzS-0z-ZoG" secondAttribute="trailing" constant="10" id="3K0-XJ-K3t"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Boa-LD-oRD" secondAttribute="trailing" constant="-20" id="7RU-Qi-VfO"/>
+                            <constraint firstItem="Boa-LD-oRD" firstAttribute="bottom" secondItem="x2u-jP-XSD" secondAttribute="bottomMargin" id="AmO-Tg-qMk"/>
+                            <constraint firstItem="Boa-LD-oRD" firstAttribute="centerX" secondItem="x2u-jP-XSD" secondAttribute="centerX" id="DvO-hx-6kg"/>
+                            <constraint firstItem="Boa-LD-oRD" firstAttribute="leading" secondItem="x2u-jP-XSD" secondAttribute="leadingMargin" constant="-20" id="NQ2-2s-kxx"/>
+                            <constraint firstItem="EzS-0z-ZoG" firstAttribute="centerX" secondItem="x2u-jP-XSD" secondAttribute="centerX" id="P39-fH-FNX"/>
+                            <constraint firstItem="Boa-LD-oRD" firstAttribute="top" secondItem="x2u-jP-XSD" secondAttribute="topMargin" id="UxI-N5-V3a"/>
+                            <constraint firstItem="Boa-LD-oRD" firstAttribute="centerY" secondItem="x2u-jP-XSD" secondAttribute="centerY" id="br8-zf-KOf"/>
+                            <constraint firstItem="EzS-0z-ZoG" firstAttribute="leading" secondItem="x2u-jP-XSD" secondAttribute="leadingMargin" constant="10" id="c4H-6v-YYK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="posterView" destination="Boa-LD-oRD" id="Ml4-QV-mlZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="to4-PO-foq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3045" y="-750"/>
+            <point key="canvasLocation" x="3001" y="-804"/>
         </scene>
         <!--Top Rated-->
         <scene sceneID="1Oi-zO-KhV">

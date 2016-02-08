@@ -17,6 +17,8 @@
 		B58D2C441C67EBC7003A23AF /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58D2C431C67EBC7003A23AF /* MovieTableViewCell.swift */; };
 		B58D2C461C67F281003A23AF /* iconmonstr-star-2-240.png in Resources */ = {isa = PBXBuildFile; fileRef = B58D2C451C67F281003A23AF /* iconmonstr-star-2-240.png */; };
 		B58D2C4A1C6802E4003A23AF /* secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = B58D2C491C6802E4003A23AF /* secrets.plist */; };
+		B58D2C4E1C680C07003A23AF /* NowPlayingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58D2C4D1C680C07003A23AF /* NowPlayingTableViewController.swift */; };
+		B58D2C501C682FC5003A23AF /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58D2C4F1C682FC5003A23AF /* MovieDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		B58D2C431C67EBC7003A23AF /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		B58D2C451C67F281003A23AF /* iconmonstr-star-2-240.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconmonstr-star-2-240.png"; sourceTree = "<group>"; };
 		B58D2C491C6802E4003A23AF /* secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = secrets.plist; sourceTree = "<group>"; };
+		B58D2C4D1C680C07003A23AF /* NowPlayingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayingTableViewController.swift; sourceTree = "<group>"; };
+		B58D2C4F1C682FC5003A23AF /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		BEEF4A141820A5849E5CCDA9 /* Pods-Flicks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flicks/Pods-Flicks.debug.xcconfig"; sourceTree = "<group>"; };
 		F503EFDBE9660A4FD939CFAB /* Pods-Flicks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flicks/Pods-Flicks.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,8 +83,10 @@
 			children = (
 				B58D2C2F1C67DDC1003A23AF /* AppDelegate.swift */,
 				B58D2C311C67DDC1003A23AF /* ViewController.swift */,
+				B58D2C4D1C680C07003A23AF /* NowPlayingTableViewController.swift */,
 				B58D2C411C67E53F003A23AF /* MovieTableViewController.swift */,
 				B58D2C331C67DDC1003A23AF /* Main.storyboard */,
+				B58D2C4F1C682FC5003A23AF /* MovieDetailViewController.swift */,
 				B58D2C431C67EBC7003A23AF /* MovieTableViewCell.swift */,
 				B58D2C361C67DDC1003A23AF /* Assets.xcassets */,
 				B58D2C451C67F281003A23AF /* iconmonstr-star-2-240.png */,
@@ -228,6 +234,8 @@
 				B58D2C301C67DDC1003A23AF /* AppDelegate.swift in Sources */,
 				B58D2C441C67EBC7003A23AF /* MovieTableViewCell.swift in Sources */,
 				B58D2C421C67E53F003A23AF /* MovieTableViewController.swift in Sources */,
+				B58D2C501C682FC5003A23AF /* MovieDetailViewController.swift in Sources */,
+				B58D2C4E1C680C07003A23AF /* NowPlayingTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
